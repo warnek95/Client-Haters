@@ -1,0 +1,46 @@
+
+							<div class="bar bar-subheader bar-dark ">
+							  <h1 class="title"> Profil </h1>
+							</div>
+
+
+					<ion-view view-title="page">
+					  <ion-content>
+					    
+					  	<div class="space"></div>
+							<div class="card">
+							  <div class="item item-divider">
+							   			Bienvenue sur votre profil
+							  </div>
+							  <div ng-controller='profileCtrl'>
+						    <div class="list">
+
+								<a class="item item-thumbnail-left" href="#">
+								    <img src="img/shen10.jpg">
+									   <h2><b>Modifier votre profil</b></h2>
+									   Pseudo : {{user.Pseudo}}<br />
+									   <!-- Age :<br /> -->
+			    						<i class="icon ion-ios-gear"></i>
+									  </a>
+							</div>
+
+							  <div class="item item-divider">
+							 <button class="button button-clear button-positive">   {{user.Posts}} publications. {{user.Followers}} Abonnée </button>
+							  </div>
+							</div>
+
+    						<div class="list">
+
+						    <a class="item item-thumbnail-left" href="#">
+						      <img src="img/shen7.jpg">
+						      <h2>Alpha djigo</h2>
+						      <p>Le cœur a ses raisons que la raison ignore .</p>
+						    </a>
+
+						    </div>
+
+						    </div>
+
+
+				  </ion-content>
+				</ion-view>

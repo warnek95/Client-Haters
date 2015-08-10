@@ -1,0 +1,123 @@
+
+
+<ion-view ng-controller="getPostCtrl">
+<ion-content ng-controller="createPostCtrl">
+
+  <ion-slide-box on-slide-changed="onSlideChanged(index)" active-slide="currentIndex" delegate-handle="post-slide">
+    <ion-slide ng-repeat="post in posts" dynamic-slides="posts">
+      <div class="box blue">
+          <div class="shen">
+                <ion-content > 
+                    <div class="shen2">
+                         <a href="#/tab/chats"><button class="button button-clear button-positive">
+                                <b>  Récents</b>
+                                </button></a>
+                        
+
+                               <button class="button button-clear button-assertive">
+                               <b> Populaires</b>
+                               </button>
+
+                               <button class="button button-clear button-energized">
+                                <b>Actualités</b>
+                               </button>		
+							                   	<br />
+								               <a href="#/tab/publier"><button class="remonter button button-small button-clear button-stable">
+                                <b>#hashtag</b>
+                               </button></a>  
+                               <a href="#/tab/publier"><button class="remonter button button-small button-clear button-stable">
+                                <b>#hashtag</b>
+                               </button></a>  
+                               <a href="#/tab/publier"><button class="remonter button button-small button-clear button-stable">
+                                <b>#hashtag</b>
+                               </button></a>  
+                               <a href="#/app/navigation"><button class="remonter button button-small button-clear button-assertive button-stable">
+                                <b>More..</b>
+                               </button></a>  
+                            
+                                  							
+                </div>
+            </ion-content>
+         </div>
+                <div class="barremoins">  </div>
+
+   					  <div class="list card">  
+
+
+                            <div class="item item-avatar first0">
+
+                                <img src="{{post.User.Avatar}}">
+                                <h2>{{post.User.Pseudo}}</h2>
+                                <p > {{post.createdAt | date:'HH:mm MMMM dd'}}</p>
+                                <div ng-controller="subscriptionCtrl">
+                                <p> <a class="button button-clear button-assertive button-small margeb " ng-click="subscribe(post.User.Pseudo)">S'abonner 
+                                  <button class=" ion-android-checkbox button-clear"></button></a></p>
+                                  </div>
+                                <div ng-controller="upVoteCtrl">
+                                <button class=" bad button-clear button ion-fireball button-assertive" ng-click="upVotePost(post.id)"></button>
+                                </div>
+                                <div class="bad2"><h4>{{ post.Report }} Bad</h4></div>
+                           </div>   
+
+                           <h1> {{post.Title}}</h1>
+                          <div class="item item-body first1">
+                            <!-- <div ng-show="PicturesArray(post.Pictures)">
+                              <div ng-repeat="Picture in post.Pictures track by Picture" > 
+                             
+                                <img  class="full-image" ng-src="http://localhost:1337/{{ Picture }}"></div>
+                               </div> -->
+
+
+                             
+                            <div ng-show="PicturesString(post.Pictures)">
+
+                              <img  class="full-image" ng-src="http://localhost:1337/{{ post.Pictures }}">
+                            </div>
+
+                                <p>
+                                 {{ post.Text}}
+
+                                </p>
+                                  <button class="button button-assertive button-clear" ng-repeat="Tag in post.Tags"> {{ Tag }} </button>
+                                 <p>
+
+                                <a  href="#/app/publications/{{post.id}}"  ><button class="button button-small button-assertive" >
+                                   Suivre la discussion...
+                                </button></a>
+
+                                  </p>  
+
+                          </div> 
+                        </div>
+<div ng-controller="postCtrl">
+                  <form ng-submit="createComment(post.id)">
+                                <div class="item item-input-inset">
+                                 <label class="item-input-wrapper">
+                                <textarea style="background:#e6e6e6;"  class="input" rows="3" cols="100" ng-model = "data.commentText">  </textarea>
+                              </label>
+                              <button class="button button-small" type="submit">
+                                Commenter
+                              </button>
+                            </div>
+                       </div>
+                       </form>
+                     </div>
+
+                          </div>
+                        
+                               <!--
+                        <div class="list center">
+                          
+                           <a class="button button-clear button-assertive button-small" href="#">Partager</a>
+                            <a class="button button-clear button-assertive button-small" href="#">Like</a>
+                             <a class="button button-clear button-assertive button-small" href="#">S'ab..</a>
+
+
+                        </div>
+                      -->
+                          	
+
+  </ion-slide>
+</ion-content>
+</ion-view>
+

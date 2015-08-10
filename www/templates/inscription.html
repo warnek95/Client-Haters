@@ -1,0 +1,66 @@
+<ion-modal-view>
+  <ion-content>
+    <div class="space"> </div>
+
+             <div class="bar bar-header bar-light">
+                <h1 class="title">Inscription</h1>
+            </div>
+
+            <br /><br />
+      <div ng-controller='SignUpCtrl'>
+        <form ng-submit="createUserForm()">
+
+               <div class="list">
+
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Pseudo</span>
+              <input type="text" id="pseudo" ng-model="signUp.pseudo" placeholder="Pseudo">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Mot de Passe</span>
+              <input type="password" id="password" ng-model="signUp.password" placeholder="Password">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Confirmation Mot de Passe</span>
+              <input type="password" id="confirm" ng-model="signUp.confirm" placeholder="Password Confirmation">
+            </label>
+
+            <p ng-if="signUp.password != signUp.confirm">Les champs mot de passe ne sont pas identiques</p>
+
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Email</span>
+              <input type="text" id="email" ng-model="signUp.email" placeholder="nicholas@tesla.com">
+            </label>
+
+
+           <!-- <label class="item item-input item-select">
+              <div class="input-label" id="" >
+                Age
+              </div>
+              <select>
+                <option>1</option>
+                <option selected>2</option>
+                <option>3</option>
+              </select>
+            </label>-->
+
+            <label class="item item-radio" id="confirm">
+              <input type="radio" name="group">
+              <div class="item-content">
+                J'ai lu et j'accepte tout les conditions.
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+           </label>
+            <br />
+              <button type="submit" class="button button-assertive center" ng-disabled="signUp.password != signUp.confirm">
+                S'enregistrer
+            </button>
+            </div>
+        </form>
+            </div>
+
+    
+  </ion-content>
+</ion-modal-view>

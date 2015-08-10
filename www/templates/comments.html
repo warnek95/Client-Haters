@@ -1,0 +1,40 @@
+<ion-content >
+<div class="space"></div><br /><br />
+
+					<div class="bar bar-header">
+         
+
+					  <h2 class="title">{{post.Title}}</h2>
+					</div>   <a href="#/app/publications"> <button class="back button button button-block button-positive  ">
+     Back   </button> </a>
+     <div ng-controller="postCtrl">
+                  <form ng-submit="createComment(post._id)">
+                                <div class="item item-input-inset">
+                                 <label class="item-input-wrapper">
+                                <textarea style="background:#e6e6e6;"  class="input" rows="3" cols="100" ng-model = "data.commentText">  </textarea>
+                              </label>
+                              <button class="button button-small" type="submit">
+                                Commenter
+                              </button>
+                            </div>
+                       </div>
+                       </form>
+                     </div>
+
+	<div class="list">
+
+<div ng-repeat="comment in post.Comments track by $index" >
+  <a class="item item-avatar" href="#">
+
+    <img src="{{comment.User.Avatar}}">
+    <h2>{{comment.User.Pseudo}}</h2>
+    <p>{{comment.Text}}</p>
+    <div ng-controller="upVoteCtrl">
+    <p><b class="red2"> <button class="  ion-fireball button button-assertive button-clear button-small"  ng-click="upVoteComment(post._id,comment.Id)"> {{comment.Report}} Bad</button></b> </p>
+  </div>
+  </a>
+
+	   
+    
+</div>
+</ion-content>

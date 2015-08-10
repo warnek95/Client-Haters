@@ -1,0 +1,301 @@
+/* Empty. Add your own CSS if you like */
+
+a {
+
+		text-decoration: none;
+
+}
+
+
+.pagelogin {
+    background-image: url('/img/shen20.jpg') ;
+
+}
+.pageacceuil {
+    background-image: url('/img/shen19.jpg') ;
+
+}
+
+.red {
+	color : red;
+}
+
+.transparent {
+	opacity : 0.9;
+	background-color : #fff;
+	    background-image: url("/img/.jpg");
+
+}
+
+.titre2 {
+
+font-weight: bold;
+font-size : 17px;
+color : white;
+}
+.swidth {
+	width:50px;
+}
+
+.top{
+
+margin-top : -18px;
+margin-left: -10px;
+}
+.space {
+
+margin-top : 40px;
+
+}
+
+
+
+.bad  {
+
+	font-size: 23px;
+	color :#E10101;
+	margin-left : 70%;
+	margin-top : -22%;
+	margin-bottom : %;
+}
+
+.bad2 {
+
+	font-size: 20px;
+	color :#E10101;
+	margin-left : 70%;
+	margin-top : -17%;
+	margin-bottom : %;
+
+
+}
+.red2 {
+
+	color :red;
+}
+
+.space2 {
+
+margin-top : 140px;
+
+}
+.small {
+
+	height : 40px;
+}
+.reds {
+	background-color : #000000;
+}
+.titre {
+
+margin-left: 100px;
+
+}
+.space2 {
+
+margin-top : 100px;
+
+}
+
+.center {
+	margin-left : 150px;
+	margin-right : 150px;
+}
+
+
+
+.barremoins {
+
+margin-top : -29px;
+
+}
+.logo {
+
+width : 50px;
+background-color : red;
+}
+.remonter {
+
+margin-top : -20px;
+
+}
+.right2 {
+
+	margin-left: 230px;
+	margin-bottom: -240px;
+	margin-top : -20px;
+}
+.red2{
+
+	font-size: 30px;
+	color : #F53737;
+}
+.haut {
+
+
+	margin-top : -37px;
+	margin-left : 30px;
+}
+
+.shen {
+
+
+	height : 80px;
+	width :;
+    background-image: url('/img/shen8.png');
+    background-repeat : no-repeat;
+        margin-left: 20px; 
+
+
+
+
+}
+.center {
+
+
+	margin-right :90px;
+	margin-left : 90px;
+	margin-bottom :-10px;
+}
+. {
+  height: 4px ;
+	background-color : #860D0D;
+}
+
+.shen2 {
+
+	margin-left: 80px;
+	min-width : 80%;
+}
+.first1 {
+
+
+	background-color : #ffffff;
+	  border: solid 2px #A11010;
+
+}
+
+.first2 {
+
+
+	background-color : #FEF7F7;
+	  border: solid 3px #ffffff;
+
+}
+
+.first0 {
+
+
+	background-color : #ffffff;
+	height : 80px;
+}
+
+.bad3 {
+
+	margin-left : 130px;
+	margin-right :-67%;
+}
+
+.text {
+	 
+	color : #ffffff;
+	background-color : #;
+	height : 40px;
+	padding: 10px;
+ 	opacity : ;
+    font-size: 1.2em; 
+}
+
+.arrondi {
+
+}
+
+.bar-shen {
+
+	background-color :#520808;
+	color : #ffffff;
+}
+.scroll-bg {
+  background: url($big-bg) no-repeat center center fixed;
+  background-size: cover;
+}
+.imageredimension2 {
+
+
+	height : 80%;
+}
+.imageredimension {
+
+
+	height : 10%;
+	width : 10%;
+}
+
+.right {
+
+margin-top: px;
+float : ;
+margin-left :160px;	
+margin-right : 0px;
+}
+
+.righttitle {
+
+	margin-left : 90px;
+	margin-top : 20px;
+}
+
+.margeb {
+	margin-top: -5px;
+	margin-bottom:  -6px;
+}
+
+
+
+@keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -300px 0; }
+}
+@-moz-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -300px 0; }
+}
+@-webkit-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -300px 0; }
+}
+@-ms-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -300px 0; }
+}
+@-o-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -300px 0; }
+}
+
+#animate-area { 
+	width: 100%; 
+	height: 100%; 
+    background-image: url("/img/shen20.jpg");
+	background-position: 0px 0px;
+
+	animation: animatedBackground 10s linear infinite;
+	-moz-animation: animatedBackground 10s linear infinite;
+	-webkit-animation: animatedBackground 10s linear infinite;
+	-ms-animation: animatedBackground 10s linear infinite;
+	-o-animation: animatedBackground 10s linear infinite;
+}
+
+
+#animate-area2 { 
+	width: 100%; 
+	height: 100%; 
+    background-image: url("/img/shen31.jpg");
+	background-position: 0px 0px;
+
+	animation: animatedBackground 10s linear infinite;
+	-moz-animation: animatedBackground 10s linear infinite;
+	-webkit-animation: animatedBackground 10s linear infinite;
+	-ms-animation: animatedBackground 10s linear infinite;
+	-o-animation: animatedBackground 10s linear infinite;
+}

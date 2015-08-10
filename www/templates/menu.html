@@ -1,0 +1,263 @@
+
+  
+<ion-side-menus ng-controller="AppCtrl" enable-menu-with-back-views="false" >
+
+  <ion-side-menu-content>
+  
+    <ion-nav-bar class="bar-stable bar-header  bar-assertive">
+
+       <ion-nav-buttons side="left"> 
+
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" ng-show="logged">
+        </button>
+        <!--
+        <ion-item nav-clear menu-close href="#/app/haters">
+        <button class="button button-clear button-positive"   >Edit</button></ion-item>-->
+    <div class="button  button-clear" ng-show="!logged"><b>Haters</b></div>
+
+
+                     <ion-side-view ng-controller="PophoverbCtrl" view-title=>
+                            <script id="my-popoverb.html" type="text/ng-template">
+
+
+                          <ion-popover-view style="width:100%; height: 60%;">
+                            <ion-header-bar>
+                              <h1 class="title">Publier un article</h1>
+                            </ion-header-bar>
+                            <ion-content>
+                                          <div ng-controller="createPostCtrl">
+                                              <form ng-submit="submitPostForm()">
+                                               
+                                              &nbsp Title : <input type='text' style="background:#F2F2F2;" ng-model = "data.postTitle" />
+                                              <textarea style="background:#F2F2F2;"  id="text" placeholder="yyy" rows="6" cols="64" ng-model="data.postText"> </textarea>
+                                                <br /><br />
+
+                                                  <label class="item item-input item-select">
+                                                <div class="input-label" id="tags">
+                                               <b class="red2"> Catégorie </b>
+                                                </div>
+                                                <div ng-controller="getTagCtrl">
+                                                <select ng-model="data.postTags">
+                                                  <option ng-repeat="tag in tags">{{tag.Wording}}</option>
+                                                </select>
+                                                </div>
+                                              </label>
+
+                                              <br />
+
+                                              <input type="file"  id="pictures" style="width:100%;" placeholder="image" class="button"  file-model="data.postPictures" />
+                                           
+                                           
+                                              <button class="button button-block button-positive" type="submit">Publier</button>
+                                          </div>
+                                        </form>
+                                        </div>
+                            </ion-content>
+                          </ion-popover-view>
+
+
+                        </script>
+
+
+                         <div class="right" style="text-aligne:center;" ng-show="logged">
+                            <a href=""  ng-click="openPopovers($event)" class="button button-clear  "> <i class="icon ion-document-text"></i></a>
+                        </div>
+                        </ion-view>
+                        
+                        <ion-side-view ng-controller="PophoverCtrl"  view-title=>
+                        <div class="haut">
+                        <script id="my-popover.html" type="text/ng-template">
+
+
+                          <ion-popover-view style="width:100%; height: 60%;">
+                            <ion-header-bar>
+                              <h1 class="title">Publier un article</h1>
+                            </ion-header-bar>
+                            <ion-content>
+                                                
+                                  <ul class="list">
+                                    <li class="item">
+                                      Vous avez reçu une notification de  <a href="#" class=""> shen </a>               
+                                    </li>
+                                    <li class="item">
+                                      Vous avez reçu une notification de                 
+                                    </li>
+                                    <li class="item">
+                                      Vous avez reçu une notification de                 
+                                    </li>
+                                    <li class="item">
+                                      Vous avez reçu une notification de                 
+                                    </li>
+                                    <li class="item">
+                                      Vous avez reçu une notification de                 
+                                    </li>
+
+                                    <li class="item">
+                                      Vous avez reçu une notification de                 
+                                    </li>
+                                    <li class="item">
+                                      Vous avez reçu une notification de                 
+                                    </li>
+                                    <li class="item">
+                                      Vous avez reçu une notification de                 
+                                    </li>
+                                    <li class="item">
+                                      Vous avez reçu une notification de                 
+                                    </li>
+                                    <li class="item">
+                                      Vous avez reçu une notification de                 
+                                    </li>
+                                    <li class="item">
+                                      Vous avez reçu une notification de                 
+                                    </li>
+                                </ul>
+                                        
+                            </ion-content>
+                          </ion-popover-view>
+
+
+                        </script>
+
+
+                        <div class="right">
+
+                        <a href="" ng-click="openPopover($event)" class="button button-clear  "> <i class="icon ion-ios-compose"></i></a>
+                        </div>
+                       </ion-side>
+                     </div>
+
+
+    </ion-nav-bar>
+
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable bar-dark">
+      <h1 class="title">NAVIGATION</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item nav-clear menu-close ng-click="login()">
+          Login
+        </ion-item>
+
+        <ion-item nav-clear menu-close href="#/app/publications">
+          Index
+        </ion-item>
+
+        <ion-item nav-clear menu-close href="#/app/publicationsSub">
+          IndexSub
+        </ion-item>
+
+         <ion-item nav-clear menu-close href="#/app/profile">
+          Profil
+        </ion-item>
+          <ion-item nav-clear menu-close href="#/app/inscription">
+          Inscription
+        </ion-item>
+          <ion-item nav-clear menu-close href="#/app/parametre">
+          Parametre
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/navigation">
+          Vos préférences
+        </ion-item>
+         <ion-item nav-clear menu-close href="#/app/haters
+         ">
+          Haters
+        </ion-item>
+        <div ng-controller='logOutCtrl'>
+        <ion-item nav-clear menu-close ng-click='logOutUser()'
+         >
+          Déconnexion
+        </ion-item>
+        </div>
+        <!--  <ion-item nav-clear menu-close href="#/app/pophover">
+          testpop
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/search">
+          Search
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/browse">
+          Browse
+        </ion-item>
+
+        <ion-item nav-clear menu-close href="#/app/playlists">
+          Playlists
+        </ion-item>
+
+         
+          <ion-item nav-clear menu-close href="#/app/profil">
+          Profil
+        </ion-item>
+          <ion-item nav-clear menu-close href="#/app/test">
+          Test
+        </ion-item>
+ <ion-item nav-clear menu-close href="#/app/publier">
+          Publier
+        </ion-item> 
+      -->
+
+      </ion-list>
+    </ion-content>
+
+
+
+
+  </ion-side-menu>
+</ion-side-menus>
+<!--
+  <ion-content>
+   <button ng-click="showConfirm()">Confirm</button>
+    <h1>PROFIL <button ng-click="showConfirm()">Confirm</button></h1>
+  </ion-content>
+</ion-view>
+
+-->
+
+<div class="bar bar-footer" ng-controller="PopupCtrl">
+
+   <button class="button button-clear button-assertive" ng-click="toggleSearch()">  <i class="icon ion-ios-search-strong"></i></button>
+
+  <label class="item item-input" ng-show="search" style="width:70% ">
+    <i class="icon ion-search placeholder-icon" ></i>
+    <input type="text" placeholder="rechercher"  >
+  </label>
+
+   <button class="button button-clear button-assertive"> <i class="icon ion-android-camera"></i></button>
+  
+  <ion-item nav-clear menu-close href="#/app/haters"  class="swidth">
+<button class="button button-clear button-assertive top" > 
+</ion-item>
+
+</div>
+<!--
+ <div class="tabs-striped tabs-color-assertive">
+    <div class="tabs">
+      <a class="tab-item tab-"  href="#/app/mojo">
+       
+        Test
+      </a>
+     
+      <a class="tab-item " href="#/app/navigation">
+        <i class="icon ion-ios-camera"></i>
+        Settings
+      </a>
+    </div>
+  </div>
+
+-->
+  <!--
+
+
+  <div class="tabs tabs-striped tabs-color-assertive">
+
+  <a class="tab-item tab-" href="#/app/mojo">
+    <i class="icon ion-ios-analytics" ></i>
+  </a>
+  <a class="tab-item" href="#/app/navigation">
+    <i class="icon ion-fireball"></i>
+  </a>
+
+</div> 
